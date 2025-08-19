@@ -24,4 +24,4 @@
     </div>
         </div>
     </nav>
-<!-- File ini berisi tampilan navbar yang akan muncul di setiap halaman --
+<!-- File ini berisi tampilan navbar yang akan muncul di setiap halaman -->

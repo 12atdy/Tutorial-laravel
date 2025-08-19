@@ -1,19 +1,23 @@
 <?php
 
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pages.beranda');
 });
-route::get('/about', function () {
+Route::get('/about', function () {
 
     return view('pages.about',[
         'nama' => 'Muhammad Idris',
         'umur' => 10,
-        'alamat' => 'Indondesia',
+        'alamat' => 'Indonesia',
     ]);
 });
 
 
-route::view('/contact','pages.contact');   
-route::view('/product','pages.product'); 
+Route::view('/contact','pages.contact');  
+//satu controler dengan method 
+Route::get('/product',[ProdukController::class, 'index']);// read data menampilkan data
+Route::get('/product/create',[ProdukController::class, 'create']);// create data menampilkan form tambah data
+Route::post('/product',[ProdukController::class, 'store']);// create data menambah data
